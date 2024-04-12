@@ -10,7 +10,8 @@ class FirstUniqueCharacterInString {
     fun firstUniqChar(s: String): Int {
 
         //return bruteForceSolution(s)
-        return improveRuntimeOperation(s)
+//        return improveRuntimeOperation(s)
+        return moreImprovedApproached(s)
     }
 
     private fun bruteForceSolution(s: String):Int{
@@ -63,9 +64,71 @@ class FirstUniqueCharacterInString {
         }
         return result
     }
+    private fun moreImprovedApproached(s: String):Int{
+        val hashMap:HashMap<Char,Int> = HashMap()
+        for (i in s.indices){
+            val char = s[i]
+            if(hashMap.contains(char)) {
+                hashMap[char] = Int.MAX_VALUE
+            }else{
+                hashMap[char] = i
 
+            }
+        }
+        var result = -1;
+        hashMap.forEach {
+            val index = it.value
+            if(index != Int.MAX_VALUE){
+                if(result == -1){
+                    result = index;
+                }else if(result > index){
+                    result = index
+                }
+            }
+        }
+        return result
+
+    }
+
+    fun firstUniqChar2(s: String): Int {
+        val count = HashMap<Char, Int>()
+        val n = s.length
+        // build hash map : character and how often it appears
+        for (i in 0 until n) {
+            val c = s[i]
+            count[c] = count.getOrDefault(c, 0) + 1
+        }
+
+        // find the index
+        for (i in 0 until n) {
+            if (count[s[i]] == 1)
+                return i
+        }
+        return -1
+    }
 }
 data class UniqueHelper(val value:Char, val index:Int)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
