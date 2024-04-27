@@ -1,12 +1,10 @@
-import arraystrings.ContainsDuplication
-import arraystrings.FirstUniqueCharacterInString
-import arraystrings.PermutationInString
+import arraystrings.trial.PermutationInString
 
 fun main(args: Array<String>) {
     // https://leetcode.com/list/x5sb3e07/
     //https://leetcode.com/discuss/general-discussion/1152824/cracking-the-coding-interview-6th-edition-in-leetcode#1
 
-    PermutationInString().printAllPermutation("ABC")
+   // PermutationInString().printAllPermutation("ABC")
 
 //    println("Permutation 1 ${PermutationInString().checkInclusion("ab","eidbaooo")}")
 //    println("Permutation 2 ${PermutationInString().checkInclusion("ab","eidboaoo")}")

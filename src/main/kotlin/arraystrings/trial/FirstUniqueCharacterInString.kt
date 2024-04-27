@@ -1,4 +1,4 @@
-package arraystrings
+package arraystrings.trial
 
 /**
  * Given a string s,
@@ -40,7 +40,7 @@ class FirstUniqueCharacterInString {
     }
 
     private fun improveRuntimeOperation(s: String):Int{
-        val hashMap:HashMap<Char,UniqueHelper> = HashMap()
+        val hashMap:HashMap<Char, UniqueHelper> = HashMap()
         for (i in s.indices){
             val char = s[i]
             if(hashMap.contains(char)) {

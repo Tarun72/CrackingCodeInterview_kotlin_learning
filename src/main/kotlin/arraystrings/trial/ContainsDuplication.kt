@@ -1,4 +1,4 @@
-package arraystrings
+package arraystrings.trial
 
 /**
  * 217. Contains Duplicate
