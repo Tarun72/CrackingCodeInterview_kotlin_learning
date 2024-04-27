@@ -6,6 +6,8 @@ package arraystrings
  */
 class ContainsDuplication {
     val questionUrl = "https://leetcode.com/problems/contains-duplicate/"
+    val questionNumber =  1.1
+    val totalQuestionsSoFar = 2;
     fun containsDuplicate(nums: IntArray): Boolean {
 //       return bruteForce(nums)
    return betterApproach(nums)
